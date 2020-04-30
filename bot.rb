@@ -9,7 +9,7 @@ require 'dotenv'
 Dotenv.load
 
 def lambda_handler(event:, context:)
-    rss = RSS::Parser.parse("http://www.city.hamada.shimane.jp/www/rss/news.rdf", false)
+    rss = RSS::Parser.parse("https://www.pref.shimane.lg.jp/top_news.rdf", true)
 
     now = Time.now.to_s
 
